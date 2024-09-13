@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Result</title>
+    <link rel="stylesheet" href="hasil.css">
+</head>
+<body>
+    <header>
+        <h1>Registration Complete</h1>
+    </header>
+    <section class="result">
+        <h2>Your Registration Details:</h2>
+        <p><strong>Name:</strong> <span id="display-name"></span></p>
+        <p><strong>Email:</strong> <span id="display-email"></span></p>
+        <p><strong>Age:</strong> <span id="display-age"></span></p>
+        <p><strong>Session:</strong> <span id="display-session"></span></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Hasil Konferensi by Hesel.</p>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const email = urlParams.get('email');
+        const age = urlParams.get('age');
+        const session = urlParams.get('session');
+        document.getElementById('display-name').textContent = name;
+        document.getElementById('display-email').textContent = email;
+        document.getElementById('display-age').textContent = age;
+        document.getElementById('display-session').textContent = session;
+    </script>
+</body>
+</html>
